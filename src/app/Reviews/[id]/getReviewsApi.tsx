@@ -12,7 +12,7 @@ export interface ReviewData {
   export default async function getReview(productId: string): Promise<ReviewData> {
   
     console.log("gets called")
-          const res = await fetch( `http://localhost:8080/reviews/${productId}`)
+          const res = await fetch( `http://api.josh.netbuildertraining.com/reviews/${productId}`)
           if (!res.ok) {
               throw new Error(`failed to fetch user ${productId}`)
           }

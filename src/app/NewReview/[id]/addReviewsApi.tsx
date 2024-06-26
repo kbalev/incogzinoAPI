@@ -11,7 +11,7 @@ export interface addReviewData {
 
     export const createReview = async (productId: string, customer: string, comment: string) => {
       const datas = { productId, customer, comment };
-      const response = await fetch(`http://localhost:8080/reviews/`, {
+      const response = await fetch(`http://api.josh.netbuildertraining.com/reviews/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(datas),

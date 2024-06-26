@@ -7,7 +7,7 @@ type Products = ProductData[]
   export default async function getAllProducts(): Promise<Products> {
   
     console.log("all products are called")
-          const res = await fetch( `http://localhost:8080/products`)
+          const res = await fetch( `http://api.josh.netbuildertraining.com/products`)
           if (!res.ok) {
               throw new Error(`failed to fetch user`)
           }
